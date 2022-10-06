@@ -13,7 +13,6 @@ const initialState = {
 function Article() {
   const [{ article, error, status }, setState] = useState(initialState);
   const { id } = useParams();
-
   useEffect(() => {
     setState(initialState);
     fetch(`/articles/${id}`).then((r) => {
